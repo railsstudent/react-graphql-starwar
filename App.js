@@ -1,24 +1,17 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Hello from './Hello'
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: 'React'
-    };
-  }
+const App = () => {
+  const [name] = useState('React');
 
-  render() {
-    return (
-      <div>
-        <Hello name={this.state.name} />
-        <p>
-          Start editing to see some magic happen :)
-        </p>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <Hello name={name} />
+      <p>
+        Start editing to see some magic happen :)
+      </p>
+    </div>
+  );
 }
 
 export default App;
