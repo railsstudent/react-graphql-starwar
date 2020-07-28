@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { GET_STARWAR_PERSONS } from './graphql/get-starwar-persons';
 import { useLazyQuery } from '@apollo/client';
+import PersonCard from './PersonCard';
 
 const SearchForm = () => {
   const [query, setQuery] = useState('');
@@ -46,6 +47,7 @@ const SearchForm = () => {
         </label>
         <button type="submit" className="submit">Submit</button>
       </form>
+      { data && data.persons && data.persons.map(person => <PersonCard key={person.id} person={person} />) }
     </>
   )
 };
