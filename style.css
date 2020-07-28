@@ -119,6 +119,12 @@ button.submit {
   width: 48%;
 }
 
+.species-container > .species {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 @media screen and (max-width: 400px) {
   .query-label {
     flex-direction: column;

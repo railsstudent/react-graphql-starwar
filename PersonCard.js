@@ -61,7 +61,7 @@ const PersonCard = (prop) => {
             { speciesName && <span>{ speciesName }</span> }
             { language && <span>{ language}</span> }
           </div>
-        </div>}
+        </div> }
       </div>
     </div>
   )

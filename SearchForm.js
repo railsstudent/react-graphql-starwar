@@ -4,7 +4,7 @@ import { useLazyQuery } from '@apollo/client';
 import PersonCard from './PersonCard';
 
 const SearchForm = () => {
-  const [query, setQuery] = useState('poe');
+  const [query, setQuery] = useState('');
   const [getPersons, { loading, data }]  = useLazyQuery(GET_STARWAR_PERSONS, { 
     variables: { 
       name: query, 
