@@ -11,24 +11,41 @@ h1, p {
 button.submit {
   background: blue;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 15px;
   font-weight: 500;
   font-size: 1rem;
+  align-self: center;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
+  width: 100%;
+  max-width: 40rem;
+  padding: 0.5rem;
 }
 
-.query-input {
-  margin-bottom: 0.5rem;
+.query-label {
+  display: flex;
 }
 
 .query-text {
   font-size: 1.1rem;
-  margin-right: 0.5rem;
+  margin-right: 0.75rem;
   text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
 }
+
+.query-input {
+  flex: 1 1 auto;
+
+  margin-bottom: 0.5rem;
+  line-height: 2.8rem;
+  border-radius: 20px;
+  font-size: 1.3rem;
+}
+
