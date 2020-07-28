@@ -5,7 +5,7 @@ const SearchForm = () => {
 
   const searchCharacters = (e) => {
     e.preventDefault();
-    console.log(query)
+    console.log(query);
   }
 
   return (
