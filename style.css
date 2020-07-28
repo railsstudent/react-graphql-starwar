@@ -49,3 +49,12 @@ button.submit {
   font-size: 1.3rem;
 }
 
+@media screen and (max-width: 400px) {
+  .query-label {
+    flex-direction: column;
+  }
+
+  .query-text {
+    margin-bottom: 0.5rem;
+  }
+}
