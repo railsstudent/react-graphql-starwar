@@ -1,6 +1,8 @@
 import React from 'react';
 import FacialFeatures from './components/FacialFeatures';
 import Measurements from './components/Measurements';
+import Species from './components/Species';
+import Homeworld from './components/Homeworld';
 
 const PersonCard = (prop) => {
   const { person } = prop;
@@ -30,17 +32,8 @@ const PersonCard = (prop) => {
         </div>
         <Measurements key={id} mass={person.mass} height={person.height} />
         <FacialFeatures key={id} eyeColor={eyeColor} skinColor={skinColor} hairColor={hairColor} />
-        { name && <div className="home-world">
-          <p className="title">Home world</p>
-          <p className="name">{ name}</p>
-        </div>}
-        { (!!speciesName || !!language) && <div className="species-container">
-          <p className="title">Species</p>
-          <div className="species">
-            { speciesName && <span>{ speciesName }</span> }
-            { language && <span>{ language}</span> }
-          </div>
-        </div> }
+        { name && <Homeworld key={id} name={name} /> }
+        { (!!speciesName || !!language) && <Species key={id} speciesName={speciesName} language={language} /> }
       </div>
     </div>
   )
