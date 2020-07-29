@@ -55,7 +55,7 @@ const PersonCard = (prop) => {
           <p className="title">Home world</p>
           <p className="name">{ name}</p>
         </div>}
-        { (speciesName || language) && <div className="species-container">
+        { (!!speciesName || !!language) && <div className="species-container">
           <p className="title">Species</p>
           <div className="species">
             { speciesName && <span>{ speciesName }</span> }

@@ -75,6 +75,8 @@ button.submit {
   margin: 0.5rem;
   text-decoration: underline;
   font-size: 1.2rem;
+  font-style: italic;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .physical-measurement > div {
@@ -123,6 +125,16 @@ button.submit {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.species-container > .species > span {
+  background-color: rebeccapurple;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
 }
 
 @media screen and (max-width: 400px) {
