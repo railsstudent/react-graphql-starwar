@@ -13,13 +13,11 @@ const PersonCard = (prop) => {
   const hairColor = hairColors.length > 0 && hairColors[0] || undefined
   const skinColor = skinColors.length > 0 && skinColors[0] || undefined
 
-  console.log('homeworld', homeworld)
   const { name = '' } = homeworld || {};
   const [{ name: speciesName, language }] = species || [ { name: '', language: '' }];
-  console.log('speciesName', speciesName, language);
 
   return (
-    <div className="person-container">
+    <div className="person-card">
       <div className="name">
         { person.name } ({ person.gender })
       </div>
