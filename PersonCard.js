@@ -1,8 +1,11 @@
 import React from 'react';
+import FacialFeatures from './components/FacialFeatures';
+import Measurements from './components/Measurements';
 
 const PersonCard = (prop) => {
   const { person } = prop;
-  const { 
+  const {
+    id, 
     eyeColor: eyeColors = [], 
     hairColor: hairColors = [], 
     skinColor: skinColors = [], 
@@ -25,30 +28,8 @@ const PersonCard = (prop) => {
         <div>
           <span>Birth year: { person.birthYear }</span>
         </div>
-        <div className="physical-measurement">
-          <p className="title">Measurements</p>
-          <div>
-            <span>Mass: { person.mass || 'N/A' }</span>
-            <span>Height: { person.height || 'N/A' }</span>
-          </div>
-        </div>
-        <div className="facial-features">
-          <p className="title">Facial features</p>
-          <div className="colors">
-            { eyeColor && <div className="color">
-              <span>Eye color: </span>
-              <span className="eye-color" key={eyeColor}>{eyeColor}</span>
-            </div> }
-            { skinColor && <div className="color">
-              <span>Skin color: </span>
-              <span className="skin-color" key={skinColor}>{skinColor}</span>
-            </div> }
-            { hairColor && <div className="color">
-              <span>Hair color: </span>
-              <span className="hair-color" key={hairColor}>{hairColor}</span>
-            </div>}
-          </div>
-        </div>
+        <Measurements key={id} mass={person.mass} height={person.height} />
+        <FacialFeatures key={id} eyeColor={eyeColor} skinColor={skinColor} hairColor={hairColor} />
         { name && <div className="home-world">
           <p className="title">Home world</p>
           <p className="name">{ name}</p>
