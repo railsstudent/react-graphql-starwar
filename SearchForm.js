@@ -48,7 +48,7 @@ const SearchForm = () => {
         <button type="submit" className="submit">Submit</button>
       </form>
       <div className="persons-container">
-      { data && data.persons && data.persons.map(person => <PersonCard key={person.id} person={person} />) }
+      { data && data.persons && data.persons.map((person, i) => <PersonCard key={`${person.id}-${i}`} person={person} />) }
       </div>
     </>
   )

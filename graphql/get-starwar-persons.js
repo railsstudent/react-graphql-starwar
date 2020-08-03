@@ -23,6 +23,10 @@
 //      id,
 //       name,
 //       language
+//     },
+//     films(orderBy: episodeId_ASC) {
+//        episodeId,
+//        title
 //     }
 // 	}
 // }
@@ -54,6 +58,10 @@ export const GET_STARWAR_PERSONS = gql`
         id,
         name,
         language
+      },
+      films(orderBy: episodeId_ASC) {
+        episodeId,
+        title     
       }
     }
   }
