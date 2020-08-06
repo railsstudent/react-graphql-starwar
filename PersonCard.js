@@ -21,7 +21,7 @@ const PersonCard = (prop) => {
   const skinColor = skinColors.length > 0 && skinColors[0] || undefined
 
   const { name = '' } = homeworld || {};
-  const [{ name: speciesName, language }] = species || [ { name: '', language: '' }];
+  const { name: speciesName, language } = species && species.length > 0 && species[0] || { name: '', language: '' };
 
   return (
     <div className="person-card">
