@@ -1,8 +1,17 @@
 import React from 'react';
 
-const FilmCard = () => {
+const FilmCard = ({films}) => {
+  const styleListItem = {
+    listStyleDisc: 'none'
+  };
+
   return (
-    <div>Film Card</div>
+    <div>
+      <p>Films</p>
+      <ul>
+        { (films || []).map(film => <li stlye={styleListItem}>{ film.title }</li>) }
+      </ul>
+    </div>
   );
 }
 

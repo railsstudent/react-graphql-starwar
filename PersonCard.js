@@ -13,7 +13,8 @@ const PersonCard = (prop) => {
     hairColor: hairColors = [], 
     skinColor: skinColors = [], 
     homeworld,
-    species
+    species,
+    films
   } = person || {}
   const eyeColor = eyeColors.length > 0 && eyeColors[0] || undefined
   const hairColor = hairColors.length > 0 && hairColors[0] || undefined
@@ -35,7 +36,7 @@ const PersonCard = (prop) => {
         <FacialFeatures key={`${id}-facial`} eyeColor={eyeColor} skinColor={skinColor} hairColor={hairColor} />
         { name && <Homeworld key={`${id}-home`} name={name} /> }
         { (!!speciesName || !!language) && <Species key={id} speciesName={speciesName} language={language} /> }
-        <FilmCard key={`${id}-films`} />
+        <FilmCard key={`${id}-films`} films={films} />
       </div>
     </div>
   )
