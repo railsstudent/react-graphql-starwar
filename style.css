@@ -146,6 +146,15 @@ button.submit {
   margin-bottom: 0.5rem;
 }
 
+.file-item:nth-child(even) {
+  background: #f5f5f5;
+}
+
+.file-item:nth-child(odd) {
+  background: teal;
+  color: #fff;
+}
+
 @media screen and (max-width: 600px) {
   .query-label {
     flex-direction: column;

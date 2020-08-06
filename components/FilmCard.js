@@ -1,15 +1,13 @@
 import React from 'react';
 
 const FilmCard = ({films}) => {
-  const styleListItem = {
-    listStyleDisc: 'none'
-  };
-
   return (
     <div>
       <p>Films</p>
-      <ul>
-        { (films || []).map(film => <li stlye={styleListItem}>{ film.title }</li>) }
+      <ul style={{marginLeft: '-1rem' }}>
+        { (films || []).map(
+          film => <li key={film.episodeId} className='file-item' style={{listStyleType: 'none'}}>{ film.title }</li>) 
+        }
       </ul>
     </div>
   );
