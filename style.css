@@ -164,8 +164,17 @@ button.submit {
     margin-bottom: 0.5rem;
   }
 
-  .person-container {
+  .persons-container {
     width: 100%;
     margin-bottom: 10px;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+  }
+
+  .person-card {
+    width: 70%;
+    margin-bottom: 1rem;
   }
 }
