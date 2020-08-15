@@ -26,7 +26,8 @@
 //     },
 //     films(orderBy: episodeId_ASC) {
 //        episodeId,
-//        title
+//        title,
+//        director
 //     }
 // 	}
 // }
@@ -61,7 +62,8 @@ export const GET_STARWAR_PERSONS = gql`
       },
       films(orderBy: episodeId_ASC) {
         episodeId,
-        title     
+        title,
+        director    
       }
     }
   }
