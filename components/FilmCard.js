@@ -2,7 +2,7 @@ import React from 'react';
 
 const ListItem = ({ film: { title, director } }) => {
   return (
-    <li className='file-item' style={{listStyleType: 'none'}}>
+    <li className='film-item' style={{listStyleType: 'none'}}>
         { title }<br/>
         { director }
     </li>
@@ -16,7 +16,7 @@ const FilmCard = ({films}) => {
       <ul style={{marginLeft: '-1rem' }}>
         { 
           (films || []).map(
-            film => <ListItem key={file.episodeId} film={film} />
+            film => <ListItem key={film.episodeId} film={film} />
           ) 
         }
       </ul>

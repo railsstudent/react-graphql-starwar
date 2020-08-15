@@ -146,11 +146,11 @@ button.submit {
   margin-bottom: 0.5rem;
 }
 
-.file-item:nth-child(even) {
+.film-item:nth-child(even) {
   background: #f5f5f5;
 }
 
-.file-item:nth-child(odd) {
+.film-item:nth-child(odd) {
   background: teal;
   color: #fff;
 }
