@@ -3,8 +3,8 @@ import React from 'react';
 const ListItem = ({ film: { title, director } }) => {
   return (
     <li className='film-item' style={{listStyleType: 'none'}}>
-        { title }<br/>
-        { director }
+        <span style={{display: 'block'}}>{title}</span>
+        <span style={{display: 'block'}}>{director}</span>
     </li>
   )
 }
