@@ -20,6 +20,8 @@ const SearchForm = () => {
     console.log('persons', data.persons)
   }
 
+  const hasResults = data && data.persons && data.persons.length > 0
+
   const searchCharacters = (e) => {
     e.preventDefault();
     console.log(query);
@@ -29,6 +31,13 @@ const SearchForm = () => {
         first: 5
       } 
     })
+  }
+
+  const renderPersons = (persons) => {
+    return (
+      persons.map((person, i) => <PersonCard key={`${person.id}-${i}`} 
+        person={person} />)
+    )
   }
 
   return (
@@ -48,7 +57,7 @@ const SearchForm = () => {
         <button type="submit" className="submit">Submit</button>
       </form>
       <div className="persons-container">
-      { data && data.persons && data.persons.map((person, i) => <PersonCard key={`${person.id}-${i}`} person={person} />) }
+      { hasResults ? renderPersons(data.persons) : <p style={{fontSize: '1.5rem'}}>No results</p> }
       </div>
     </>
   )
